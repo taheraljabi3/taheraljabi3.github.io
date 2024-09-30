@@ -1,52 +1,49 @@
-/* تنسيقات أساسية */
+/* تصميم الحاويات بشكل مركزي */
 body {
-    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center; /* لتوسيط أفقي */
+    align-items: center; /* لتوسيط عمودي */
+    min-height: 100vh; /* لتغطية الشاشة بالكامل */
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif; /* تحسين خط النص */
+    background-color: #f4f4f4; /* خلفية لطيفة */
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+/* توسيط النصوص داخل الحاويات */
+header, main, footer {
     text-align: center;
+    width: 80%; /* للتحكم في عرض المحتوى */
+    max-width: 800px; /* أقصى عرض للمحتوى */
+    margin: auto; /* التوسيط الأفقي */
 }
 
-header h1 {
-    margin: 0;
-}
-
+/* تصميم روابط القوائم */
 nav ul {
-    list-style: none;
+    list-style-type: none; /* إزالة النقاط */
     padding: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    display: inline-block;
+    margin-right: 20px; /* مسافة بين العناصر */
 }
 
 nav ul li a {
-    color: #fff;
     text-decoration: none;
-}
-
-main {
-    padding: 20px;
-}
-
-h2 {
     color: #333;
 }
 
+nav ul li a:hover {
+    color: #007BFF; /* لون عند التمرير */
+}
+
+/* تحسين تنسيق الفقرات */
+main section {
+    margin: 20px 0;
+}
+
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #555;
 }
