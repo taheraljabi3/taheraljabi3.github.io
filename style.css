@@ -3,21 +3,22 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333333; /* لون الخلفية الرمادي الداكن */
-    color: #FFFFFF; /* لون النص الأبيض */
+    background-color: #FFFFFF; /* لون الخلفية أبيض لتوفير تباين واضح */
+    color: #333333; /* لون النص الأساسي رمادي غامق لسهولة القراءة */
     text-align: center; /* محاذاة جميع النصوص إلى الوسط */
     direction: rtl; /* محاذاة الكتابة من اليمين إلى اليسار */
 }
 
 header {
-    background-color: #007BFF; /* لون رأس الصفحة الأزرق الداكن */
-    color: #FFFFFF; /* لون النص في رأس الصفحة */
+    background-color: #007BFF; /* اللون الأزرق من الشعار */
+    color: #FFC107; /* اللون الذهبي من الشعار */
     padding: 10px;
     text-align: center; /* محاذاة النص في العنوان إلى الوسط */
 }
 
 header h1 {
     margin: 0;
+    color: #FFC107; /* النص الرئيسي في الهيدر باللون الذهبي */
 }
 
 nav ul {
@@ -32,12 +33,12 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #FFC107; /* لون الروابط بالأصفر الذهبي */
+    color: #FFC107; /* لون الروابط بالذهبي */
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #66B2FF; /* لون الروابط عند التمرير الأزرق الفاتح */
+    color: #007BFF; /* لون الروابط عند التمرير الأزرق */
 }
 
 main {
@@ -54,8 +55,8 @@ main {
 }
 
 .article-card {
-    background-color: #2d3e4f; /* لون خلفية البطاقات */
-    color: #FFFFFF; /* لون النص داخل البطاقات */
+    background-color: #007BFF; /* لون خلفية البطاقات الأزرق */
+    color: #FFC107; /* لون النص داخل البطاقات بالذهبي */
     border-radius: 10px;
     overflow: hidden;
     width: 250px;
@@ -78,7 +79,7 @@ main {
 }
 
 .article-card .year {
-    color: #FFC107; /* لون النص الأصفر للسنوات */
+    color: #FFC107; /* لون النص الذهبي للسنوات */
     font-weight: bold;
     margin: 5px 0;
 }
@@ -86,11 +87,12 @@ main {
 .article-card h3 {
     font-size: 1.1em;
     margin: 0;
+    color: #FFC107; /* لون العنوان الذهبي */
 }
 
 button {
-    background-color: #66B2FF; /* لون خلفية الأزرار بالأزرق الفاتح */
-    color: #FFFFFF; /* لون النص في الأزرار أبيض */
+    background-color: #FFC107; /* لون خلفية الأزرار بالذهبي */
+    color: #007BFF; /* لون النص في الأزرار بالأزرق */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -99,12 +101,13 @@ button {
 }
 
 button:hover {
-    background-color: #007BFF; /* تغيير لون الزر عند التمرير إلى الأزرق الداكن */
+    background-color: #007BFF; /* تغيير لون الزر عند التمرير إلى الأزرق */
+    color: #FFC107; /* تغيير لون النص إلى الذهبي */
 }
 
 footer {
-    background-color: #007BFF; /* لون الفوتر بالأزرق الداكن */
-    color: #FFFFFF; /* لون النص في الفوتر */
+    background-color: #007BFF; /* لون الفوتر بالأزرق */
+    color: #FFC107; /* لون النص في الفوتر بالذهبي */
     text-align: center; /* محاذاة النص في الفوتر إلى الوسط */
     padding: 10px;
     position: fixed;
