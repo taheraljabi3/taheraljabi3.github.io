@@ -3,8 +3,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: #1a2b3c; /* لون الخلفية الداكن */
+    color: #fff; /* لون النص الأبيض */
     text-align: center; /* محاذاة جميع النصوص إلى الوسط */
     direction: rtl; /* محاذاة الكتابة من اليمين إلى اليسار */
 }
@@ -41,29 +41,9 @@ main {
     text-align: center; /* محاذاة محتوى القسم الرئيسي إلى الوسط */
 }
 
-h2 {
-    color: #333;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center; /* محاذاة النص في الفوتر إلى الوسط */
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-body {
-    background-color: #1a2b3c; /* لون الخلفية الداكن */
-    color: #fff; /* لون النص الأبيض */
-    font-family: Arial, sans-serif;
-    text-align: center;
-}
-
 .articles {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
     padding: 20px;
     gap: 20px; /* المسافة بين البطاقات */
@@ -104,3 +84,18 @@ body {
     margin: 0;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center; /* محاذاة النص في الفوتر إلى الوسط */
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .article-card {
+        width: 90%; /* عرض البطاقات يصبح أكبر على الشاشات الصغيرة */
+    }
+}
