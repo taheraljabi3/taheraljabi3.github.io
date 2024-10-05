@@ -5,13 +5,15 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    text-align: center; /* محاذاة جميع النصوص إلى الوسط */
+    direction: rtl; /* محاذاة الكتابة من اليمين إلى اليسار */
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px;
-    text-align: center;
+    text-align: center; /* محاذاة النص في العنوان إلى الوسط */
 }
 
 header h1 {
@@ -21,6 +23,7 @@ header h1 {
 nav ul {
     list-style: none;
     padding: 0;
+    text-align: center; /* محاذاة قائمة التنقل إلى الوسط */
 }
 
 nav ul li {
@@ -35,6 +38,7 @@ nav ul li a {
 
 main {
     padding: 20px;
+    text-align: center; /* محاذاة محتوى القسم الرئيسي إلى الوسط */
 }
 
 h2 {
@@ -44,7 +48,7 @@ h2 {
 footer {
     background-color: #333;
     color: #fff;
-    text-align: center;
+    text-align: center; /* محاذاة النص في الفوتر إلى الوسط */
     padding: 10px;
     position: fixed;
     bottom: 0;
