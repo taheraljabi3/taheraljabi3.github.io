@@ -3,117 +3,150 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #333333; /* لون الخلفية الرمادي الداكن */
-    color: #FFFFFF; /* لون النص الأبيض */
-    text-align: center; /* محاذاة جميع النصوص إلى الوسط */
+    background-color: #F4F4F4; /* لون الخلفية الرمادي الفاتح */
+    color: #222222; /* لون النص الأساسي الرمادي الداكن */
+    text-align: center;
     direction: rtl; /* محاذاة الكتابة من اليمين إلى اليسار */
 }
 
 header {
-    background-color: #007BFF; /* لون رأس الصفحة الأزرق الداكن */
-    color: #FFFFFF; /* لون النص في رأس الصفحة */
-    padding: 10px;
-    text-align: center; /* محاذاة النص في العنوان إلى الوسط */
+    background-color: #0056A6; /* لون رأس الصفحة الأزرق الداكن */
+    color: #FFFFFF; /* لون النص في رأس الصفحة أبيض */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; /* لضمان استجابة العنوان للشاشات الصغيرة */
+}
+
+header .logo {
+    height: 30px;
+    margin-left: 20px;
 }
 
 header h1 {
     margin: 0;
+    font-size: 2em;
+    flex-grow: 1;
+    text-align: center; /* محاذاة النص في العنوان إلى الوسط */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
-    text-align: center; /* محاذاة قائمة التنقل إلى الوسط */
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap; /* لجعل القائمة استجابة للشاشات الصغيرة */
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 10px;
+    margin: 0 15px;
 }
 
 nav ul li a {
-    color: #FFC107; /* لون الروابط بالأصفر الذهبي */
+    color: #FFFFFF; /* لون الروابط أبيض */
     text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
 }
 
 nav ul li a:hover {
-    color: #66B2FF; /* لون الروابط عند التمرير الأزرق الفاتح */
+    color: #FFBF00; /* لون الروابط عند التمرير بالذهبي الناعم */
 }
 
 main {
-    padding: 20px;
-    text-align: center; /* محاذاة محتوى القسم الرئيسي إلى الوسط */
+    padding: 40px 20px;
+}
+
+.extra-content {
+    background-color: #FFFFFF; /* لون خلفية البطاقات أبيض */
+    color: #222222;
+    border-radius: 15px;
+    overflow: hidden;
+    width: 1000px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    text-align: right; /* محاذاة النصوص إلى اليمين */
+    margin: 20px auto; /* محاذاة البطاقة إلى الوسط */
+    padding: 50px;
 }
 
 .articles {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 30px; /* المسافة بين البطاقات */
     padding: 20px;
-    gap: 20px; /* المسافة بين البطاقات */
 }
 
 .article-card {
-    background-color: #2d3e4f; /* لون خلفية البطاقات */
-    color: #FFFFFF; /* لون النص داخل البطاقات */
-    border-radius: 10px;
+    background-color: #FFFFFF; /* لون خلفية البطاقات أبيض */
+    color: #222222;
+    border-radius: 15px;
     overflow: hidden;
-    width: 250px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    width: 300px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer; /* تغيير المؤشر عند المرور */
+    text-align: right; /* محاذاة النصوص إلى اليمين */
 }
 
 .article-card:hover {
     transform: scale(1.05); /* تأثير التكبير عند مرور المؤشر */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
-
 .article-card img {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
+    width: 40%; /* جعل الصورة تمتد أكثر للحصول على مظهر أفضل، ولكن تظل هناك مسافة للحواف */
+    height: auto;
+    display: block;
+    margin: 20px auto; /* تعديل المسافة لتكون متناسقة بشكل أفضل */
+    border-radius: 15px; /* زيادة انحناء الصورة لجعلها تبدو أكثر أناقة */
+    background-color: #ffffff; /* جعل الخلفية بيضاء لإبراز الصورة بشكل أوضح */
+    border: 3px solid #ccc; /* إضافة حدود ذات لون ناعم لتعزيز الاحترافية */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* إضافة ظل ناعم للصورة لجعلها بارزة أكثر */
+    border-bottom-left-radius: 15px; /* توحيد انحناء الزاوية السفلية مع بقية الزوايا */
+    padding: 10px; /* زيادة المسافة الداخلية للصورة قليلاً لإعطاء مظهر متناسق */
 }
 
 .article-card .content {
-    padding: 15px;
-}
-
-.article-card .year {
-    color: #FFC107; /* لون النص الأصفر للسنوات */
-    font-weight: bold;
-    margin: 5px 0;
+    padding: 20px;
 }
 
 .article-card h3 {
-    font-size: 1.1em;
-    margin: 0;
+    font-size: 1.6em;
+    margin: 0 0 10px;
+    color: #0056A6; /* العنوان باللون الأزرق الداكن */
+    text-align: center;
 }
 
-button {
-    background-color: #66B2FF; /* لون خلفية الأزرار بالأزرق الفاتح */
-    color: #FFFFFF; /* لون النص في الأزرار أبيض */
+.article-card p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555555; /* لون النص الفرعي رمادي فاتح */
+}
+
+button.back-btn {
+    background-color: #FFBF00; /* لون خلفية زر الرجوع باللون الذهبي */
+    color: #FFFFFF;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    margin-top: 20px;
 }
 
-button:hover {
-    background-color: #007BFF; /* تغيير لون الزر عند التمرير إلى الأزرق الداكن */
+button.back-btn:hover {
+    background-color: #0056A6; /* تغيير لون الزر عند التمرير إلى الأزرق الداكن */
+    color: #FFFFFF;
 }
 
-footer {
-    background-color: #007BFF; /* لون الفوتر بالأزرق الداكن */
-    color: #FFFFFF; /* لون النص في الفوتر */
-    text-align: center; /* محاذاة النص في الفوتر إلى الوسط */
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-@media (max-width: 768px) {
-    .article-card {
-        width: 90%; /* عرض البطاقات يصبح أكبر على الشاشات الصغيرة */
-    }
+.single-article {
+    width: 80%;
+    margin: auto;
 }

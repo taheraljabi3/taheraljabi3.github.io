@@ -1,16 +1,34 @@
-// عرض رسالة ترحيبية عند الضغط على زر
 document.addEventListener("DOMContentLoaded", function() {
-    // إنشاء زر جديد
-    const button = document.createElement("button");
-    button.innerHTML = "اضغط هنا للترحيب";
-    button.id = "welcomeButton"; // إضافة معرف للزر
-    document.body.appendChild(button);
+    function showSingleArticle(articleId) {
+        const articleCard = document.getElementById(articleId);
+        const mainContent = document.getElementById("main-content");
+        
+        // إخفاء جميع المقالات وإظهار المقالة المختارة فقط
+        mainContent.innerHTML = '';
 
-    // تعريف دالة الترحيب
-    function showWelcomeMessage() {
-        alert("مرحباً بك في موقعي!");
+        // نسخ المقالة المختارة وإضافتها إلى الصفحة
+        const singleArticle = articleCard.cloneNode(true);
+        singleArticle.classList.add('single-article');
+        singleArticle.querySelector('.extra-content').style.display = "block"; // عرض المحتوى الكامل
+        singleArticle.querySelector('.summary-content').style.display = "none"; // إخفاء الملخص
+        
+        mainContent.appendChild(singleArticle);
+
+        // إضافة زر رجوع
+        const backButton = document.createElement('button');
+        backButton.innerHTML = "رجوع";
+        backButton.className = "back-btn";
+        backButton.onclick = function() {
+            location.reload(); // إعادة تحميل الصفحة لعرض جميع المقالات مرة أخرى
+        };
+        mainContent.appendChild(backButton);
     }
 
-    // إضافة مستمع الحدث للزر
-    button.addEventListener("click", showWelcomeMessage);
+    // ربط المقالات القابلة للنقر بالوظيفة
+    const articleCards = document.querySelectorAll('.article-card');
+    articleCards.forEach(card => {
+        card.addEventListener('click', function() {
+            showSingleArticle(this.id);
+        });
+    });
 });
