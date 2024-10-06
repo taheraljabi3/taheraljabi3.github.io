@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #F4F4F4; /* لون الخلفية الرمادي الفاتح */
+    background-color: #000000; /* لون الخلفية الرمادي الفاتح */
     color: #222222; /* لون النص الأساسي الرمادي الداكن */
     text-align: center;
     direction: rtl; /* محاذاة الكتابة من اليمين إلى اليسار */
